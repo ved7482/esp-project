@@ -27,19 +27,30 @@
           <p class="eyebrow">TRANSMISSION</p>
           <h2>Select protocol</h2>
         </div>
+
         <span id="selected-tag" class="selected-tag">HTTP</span>
       </div>
+
       <div class="protocol-picker" role="group" aria-label="Telemetry protocol">
         <button type="button" class="protocol-option selected" data-protocol="http" aria-pressed="true">
-          <span class="protocol-icon">H</span><span class="protocol-name">HTTP<small>REST · TCP</small></span><span class="radio"></span>
+          <span class="protocol-icon">H</span>
+          <span class="protocol-name">HTTP<small>REST · TCP</small></span>
+          <span class="radio"></span>
         </button>
+
         <button type="button" class="protocol-option" data-protocol="coap" aria-pressed="false">
-          <span class="protocol-icon">C</span><span class="protocol-name">CoAP<small>POST · UDP</small></span><span class="radio"></span>
+          <span class="protocol-icon">C</span>
+          <span class="protocol-name">CoAP<small>POST · UDP</small></span>
+          <span class="radio"></span>
         </button>
+
         <button type="button" class="protocol-option" data-protocol="mqtt" aria-pressed="false">
-          <span class="protocol-icon">M</span><span class="protocol-name">MQTT<small>Publish · TCP</small></span><span class="radio"></span>
+          <span class="protocol-icon">M</span>
+          <span class="protocol-name">MQTT<small>Publish · TCP</small></span>
+          <span class="radio"></span>
         </button>
       </div>
+
       <div class="control-footer">
         <button type="button" id="run-button" class="run-button">Start transmission</button>
         <span id="control-hint" class="hint">Select a protocol and start the NodeMCU transmission.</span>
@@ -48,63 +59,127 @@
 
     <section class="section">
       <div class="section-title">
-        <div><p class="eyebrow">DHT11</p><h2>Ambient conditions</h2></div>
+        <div>
+          <p class="eyebrow">DHT11</p>
+          <h2>Ambient conditions</h2>
+        </div>
         <span id="reading-time" class="reading-time">Waiting for sensor data</span>
       </div>
+
       <div class="metric-grid two">
         <article class="metric-card sensor-card">
           <span class="metric-label">Temperature</span>
-          <div class="metric-value"><strong id="temperature">—</strong><span>°C</span></div>
+          <div class="metric-value">
+            <strong id="temperature">--</strong><span>°C</span>
+          </div>
         </article>
+
         <article class="metric-card sensor-card">
           <span class="metric-label">Relative humidity</span>
-          <div class="metric-value"><strong id="humidity">—</strong><span>%</span></div>
+          <div class="metric-value">
+            <strong id="humidity">--</strong><span>%</span>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="section">
       <div class="section-title">
-        <div><p class="eyebrow">INA219</p><h2>Battery / supply</h2></div>
+        <div>
+          <p class="eyebrow">INA219</p>
+          <h2>Battery / supply</h2>
+        </div>
       </div>
+
       <div class="metric-grid three">
         <article class="metric-card power-card">
           <span class="metric-label">Voltage</span>
-          <div class="metric-value"><strong id="battery-voltage">—</strong><span>V</span></div>
+          <div class="metric-value">
+            <strong id="battery-voltage">--</strong><span>V</span>
+          </div>
         </article>
+
         <article class="metric-card power-card">
           <span class="metric-label">Current draw</span>
-          <div class="metric-value"><strong id="battery-current">—</strong><span>mA</span></div>
+          <div class="metric-value">
+            <strong id="battery-current">--</strong><span>mA</span>
+          </div>
         </article>
+
         <article class="metric-card power-card">
           <span class="metric-label">Power</span>
-          <div class="metric-value"><strong id="battery-power">—</strong><span>mW</span></div>
+          <div class="metric-value">
+            <strong id="battery-power">--</strong><span>mW</span>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="section">
       <div class="section-title">
-        <div><p class="eyebrow">ESP8266 PERFORMANCE</p><h2>Transmission metrics</h2></div>
+        <div>
+          <p class="eyebrow">ESP8266 PERFORMANCE</p>
+          <h2>Transmission metrics</h2>
+        </div>
         <span id="metric-protocol" class="reading-time">No packet measured</span>
       </div>
+
       <div class="metric-grid four">
-        <article class="metric-card performance-card"><span class="metric-label">Packet payload</span><div class="metric-value"><strong id="payload">—</strong><span>bytes</span></div></article>
-        <article class="metric-card performance-card"><span class="metric-label">Protocol overhead</span><div class="metric-value"><strong id="overhead">—</strong><span>bytes</span></div></article>
-        <article class="metric-card performance-card"><span class="metric-label">Estimated total</span><div class="metric-value"><strong id="total">—</strong><span>bytes</span></div></article>
-        <article class="metric-card performance-card"><span class="metric-label">RAM drop</span><div class="metric-value"><strong id="ram-drop">—</strong><span>bytes</span></div></article>
+        <article class="metric-card performance-card"><span class="metric-label">Packet payload</span>
+          <div class="metric-value">
+            <strong id="payload">--</strong><span>bytes</span>
+          </div>
+        </article>
+
+        <article class="metric-card performance-card"><span class="metric-label">Protocol overhead</span>
+          <div class="metric-value">
+            <strong id="overhead">--</strong><span>bytes</span>
+          </div>
+        </article>
+
+        <article class="metric-card performance-card"><span class="metric-label">Estimated total</span>
+          <div class="metric-value">
+            <strong id="total">--</strong><span>bytes</span>
+          </div>
+        </article>
+
+        <article class="metric-card performance-card"><span class="metric-label">RAM drop</span>
+          <div class="metric-value">
+            <strong id="ram-drop">--</strong><span>bytes</span>
+          </div>
+        </article>
       </div>
-      <p class="measurement-note">Total bytes include estimated IP/transport headers. RAM drop is the sampled decrease in free heap during transmission, not total program RAM use.</p>
+
+      <p class="measurement-note">Total bytes include estimated IP/transport headers. RAM drop is the sampled decrease
+        in free heap during transmission, not total program RAM use.</p>
     </section>
 
     <section class="panel comparison">
       <div class="section-title">
-        <div><p class="eyebrow">EXPERIMENT RESULTS</p><h2>Protocol comparison</h2></div>
+        <div>
+          <p class="eyebrow">EXPERIMENT RESULTS</p>
+          <h2>Protocol comparison</h2>
+        </div>
       </div>
+
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Protocol</th><th>Samples</th><th>Avg. payload</th><th>Avg. overhead</th><th>Avg. total</th><th>Avg. RAM drop</th><th>Avg. power</th></tr></thead>
-          <tbody id="comparison-body"><tr><td colspan="7" class="empty">Waiting for measurements</td></tr></tbody>
+          <thead>
+            <tr>
+              <th>Protocol</th>
+              <th>Samples</th>
+              <th>Avg. payload</th>
+              <th>Avg. overhead</th>
+              <th>Avg. total</th>
+              <th>Avg. RAM drop</th>
+              <th>Avg. power</th>
+            </tr>
+          </thead>
+          <tbody id="comparison-body">
+            <tr>
+              <td colspan="7" class="empty">Waiting for measurements</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </section>
